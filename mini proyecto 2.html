@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Andree</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            width: 90%;
+            max-width: 320px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            animation: fadeIn 1s ease;
+        }
+
+        img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: gray;
+        }
+
+        .btn {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .instagram {
+            background-color: #E1306C;
+        }
+
+        .github {
+            background-color: #333;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <!-- Imagen -->
+        <img src="https://via.placeholder.com/100" alt="perfil">
+
+        <h1>Andree 👋</h1>
+        <p id="texto">Web developer en aprendizaje</p>
+
+        <!-- Botón JS -->
+        <button class="btn" onclick="cambiarTexto()">
+            Saber más
+        </button>
+
+        <!-- Redes -->
+        <button class="btn instagram" onclick="irInstagram()">
+            Instagram
+        </button>
+
+        <button class="btn github" onclick="irGithub()">
+            GitHub
+        </button>
+    </div>
+
+    <script>
+        function cambiarTexto() {
+            document.getElementById("texto").innerText =
+            "Estoy aprendiendo HTML, CSS y JavaScript 😎";
+        }
+
+        function irInstagram() {
+            window.open("https://instagram.com/elandree_07", "_blank");
+        }
+
+        function irGithub() {
+            window.open("https://github.com", "_blank");
+        }
+    </script>
+
+</body>
+</html>
